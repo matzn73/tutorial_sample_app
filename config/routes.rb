@@ -8,5 +8,12 @@ Rails.application.routes.draw do
 
   # users
   get '/signup', to: 'users#new'
+
+  # sessions
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#delete'
+
+  # users
   resources :users
 end
